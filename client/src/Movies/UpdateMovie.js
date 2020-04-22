@@ -9,7 +9,7 @@ const initialItem = {
   stars: []
 };
 
-const UpdateMovie = props => {
+const UpdateMovie = (props) => {
   const { push } = useHistory();
   const [item, setItem] = useState(initialItem);
   const { id } = useParams();
@@ -41,7 +41,7 @@ const UpdateMovie = props => {
       .put(`http://localhost:5000/api/movies/${id}`, item)
       .then(res => {
         // res.data
-        setItem(res.data);
+        props.getMovieList()
         push('/');
       })
       .catch(err => console.log(err));
