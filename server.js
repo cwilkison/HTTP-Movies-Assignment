@@ -44,6 +44,7 @@ let movies = [
     stars: ["Jim Carrey", "Jeff Daniels", "Lauren Holly"]
   },
   {
+    
     id: 5,
     title: "Tombstone",
     director: "George P. Cosmatos",
